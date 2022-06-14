@@ -1,0 +1,78 @@
+@font-face {
+    /* font-face permet l'import de police d'écriture  */
+    /* font-family permet de nommer sa police */
+    font-family: "Blaka-Regular";
+    /* src permet d'indiquer le lien vers le fichier */
+    src: url("./Blaka-Regular.ttf");
+}
+:root{
+    /* Les variables CSS permettent d'enregistrer une valeur, dans un nom que l'on pourra réutiliser à plusieurs endroits de notre code.
+    Leurs noms doivent commencer par"--" pour les utiliser quelque part on utilisera la fonction var() à laquelle on donnera le nom de la variable à afficher */
+    --mainBgcolor: #ABCDEF;
+    --mainTextcolor: #7e5f41;
+    --divTextSize: 0.8rem
+}
+body{
+    background-color: aquamarine;
+}
+.target1{
+    background-color: rgb(0, 0, 0);
+    /* rgb pend trois valeurs entre 0 et 255 représentant la quantité de rouge, vert et bleu */
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    /* pour utiliser une police importé, il suffit d'utiliser le nom donné plus haut */
+    font-family: Blaka-Regular;
+}
+.target2{
+    background-color: rgb(52, 163, 44);
+    /* hsl est un cercle chromatique dont on indique le degré en premier paramètre, puis  */
+    color: hsl(280, 50%, 50%);
+    font-size: 1cm;
+}
+.target3{
+    background-color: #000000;
+    /* On peut aussi écrire une couleur en héxadecimal dans ce cas  */
+    color: #FFFFFF;
+    font-size: 2em;
+}
+.target4{
+    background-color: #FF0000;
+    color: rgba(20, 169, 239, 0.9);
+    font-size: 2rem;
+}
+.target5{
+    background-color: rgba(61, 119, 119, 0.637);
+    font-size: 10vw;
+}
+.target6{
+    font-size: 10vh;
+}
+.target7{
+    font-size: 50%;
+}
+.target8{
+    background-color: var(--mainBgcolor);
+    color: var(--mainTextcolor);
+    font-size: var(--divTextSize)
+}
+.target9{
+    background-color: var(--mainBgcolor);
+    color: var(--mainTextcolor);
+    font-size: var(--divTextSize)
+}
+.target10{
+    background-color: var(--mainBgcolor);
+    color: var(--mainTextcolor);
+    font-size: var(--divTextSize)
+}
+div{
+    /* Une classe à une plus grande importance qu'une balise en css, donc les éléments selectionné précédement ne sont pas modifié par ce selecteur */
+    background-color: chartreuse;
+}
+.target1 ~ div{
+    /* Plus on sera précis dans notre selecteur, usant des parents, frères, id, classes, plus sa priorité sera grande */
+    background-color: blueviolet;
+}
+div{
+    background-color: bisque !important;
+}

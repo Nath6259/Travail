@@ -1,0 +1,40 @@
+.cards{
+    box-sizing: border-box;
+    width: 20%;
+    position: absolute;
+    display: grid;
+    
+}
+.card-1{
+    background-color: rgb(133, 133, 133);
+    color: whitesmoke;
+
+}
+.card-2{
+    background-color: rgb(133, 133, 133);
+    color: whitesmoke;
+    
+}
+.card-3{
+    background-color: rgb(133, 133, 133);
+    color: whitesmoke;
+    
+}
+.card-4{
+    background-color: rgb(133, 133, 133);
+    color: whitesmoke;
+    
+}
+.card-5{
+    background-color: rgb(133, 133, 133);
+    color: whitesmoke;
+    
+}
+.card-6{
+    background-color: rgb(133, 133, 133);
+    color: whitesmoke;
+    
+}
+img{
+    max-width: 30%;
+}

@@ -1,0 +1,23 @@
+.clipPath img{
+    object-fit: cover;
+    height: 600px;
+    width: 400px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.clipPath{
+    overflow-y: scroll;
+    position: relative;
+}
+.box{
+    height: 100vh;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+.b1{
+    background-color: orange;
+}
+.b2{
+    background-color: royalblue;
+}

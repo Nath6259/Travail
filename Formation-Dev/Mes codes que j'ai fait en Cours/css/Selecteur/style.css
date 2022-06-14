@@ -1,0 +1,110 @@
+/*on indique le selecteur css, puis on ouvre les accolades. et dans ces accolades on indique les différentes propriété que l'on donne à notre cible.
+
+Les proprétés css sont écrite comme suis: un nom, puis ":" sa valeur, puis ";" nom: valeur;*/
+main{
+    background-color: aquamarine;
+}
+footer{
+    /*!important va garder le priorité absolue sur ! toute autre proprété, éviter de l'utiliser à tout va */
+    background-color: darkblue;
+}
+/*---------------------------------- Enfant direct ou indirect ------------------------------------------------ */
+main p{
+    /*on selectionne tout les p du site se trouvant dans un main peu importe si il y a d'autre balises les séparants */ 
+    background-color: red;
+}
+main > p{
+    /*on selectionne uniquement les p se trouvant directement dans un p, sans balise les séparants. */
+    background-color: olive;
+}
+/*------------------------------------ Frère direct ou indirect -------------------------------------------- */
+h3 ~ li{
+    /*slectionne tous les li qui suis un h3 */
+    background-color: yellowgreen;
+}
+h3 + li{
+    /*slectionne le premier li qui suis h3 */
+    background-color: peachpuff;
+}
+/* ----------------------- les pseudos classes -----------------------------*/
+/* Les pseudos classes, sont écrites de la facon suivantes ":nom"*/
+li:hover{
+    /* Modifie l'élement au survol de la souris. */
+    background-color: deeppink;
+}
+li:nth-of-type(3){
+    /* Selectionne le 3ème li */
+    /*existe aussi en partant de la fin avec :nth-last-of-type */
+    background-color: tomato;
+}
+li:nth-last-child(1){
+    /* Selectionne l'élément li 1 en partant de la fin */
+    /* existe aussi en partant du début avec :nth-child */
+    background-color: black;
+    color: antiquewhite;
+}
+h1 a{
+    color: darkorange;
+}
+h1 a:active{
+    color: cyan;
+}
+h1 a:visited{
+    color: cornflowerblue;
+}
+p span:not(:nth-of-type(4)){
+    color: magenta;
+}
+*:not(h1, a){
+    font-size: 20px;
+}
+/* -------------------------- Les pseudo éléments --------------------------- */
+/* Les pseudos éléments sont écrits de cette facon ::nom */
+article p::first-letter{
+    /* modifie la premiere lettre de mon p se trouvant dans article */
+    font-size: 50px;
+}
+main > p::first-line{
+    /* modifie la premiere ligne du p directement enfant de main */
+    font-weight: 900;
+}
+h1::before{
+    content: "c'est faux ->";
+    color: crimson;
+}
+h1::after{
+    /* Place un élément après la cible */
+    content: "<- il ment en allemand !";
+    color: crimson;
+}
+/* ---------------------------Classes, ID et Attributs -------------------------------  */
+#MenuImportant{
+   /* Pour cibler un id dans notre page, nous avons besoin d'écrire avant son nom le symbole "#" */
+    font-size: 42px;
+    font-weight: 900;
+    color: red;
+}
+.peuImportant{
+    /* Pour sélectionner une classe, nous ajoutons un "." avant son nom */
+    font-size: 8px;
+    font-weight: 100;
+    color: gainsboro;
+}
+a[target]{
+    /* Selectionne tout les a qui possèdent l'attribut target */
+    font-style: italic;
+}
+a[href*=amazon]{
+    /* selectionne tous les a dont l'attribut href contient les caractères "amazon" */
+    font-family: monospace;
+}
+a[href$=".fr"]{
+    /* selectionne tous les a dont l'attribut href termine par .fr */
+    background-color: blue;
+}
+a[href^="https"]::before{
+    content: "✓";
+}
+article p, li:nth-child(2), header p {
+    font-family: cursive;
+}

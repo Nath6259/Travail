@@ -1,0 +1,28 @@
+.main-header{
+    background-color: rgb(28, 28, 61) ;
+}
+.container{
+    margin: 0 auto;
+    width: 100%;
+}
+a{
+    text-decoration: none;
+    color: whitesmoke;
+}
+.menu-item{
+    display: inline-block;
+    padding-right: 27px;
+    padding-bottom: 10px;
+}
+.main-content{
+    background-color: rgb(28, 28, 61);
+    color: whitesmoke;
+    padding-left: 330px;
+}
+h2{
+    color: rgb(57, 23, 211);
+}
+.main-footer{
+    background-color: rgb(28, 28, 61);
+    color: rgb(112, 112, 112);
+}
