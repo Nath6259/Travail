@@ -1,0 +1,51 @@
+*, ::before, ::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@keyframes cloud {
+    from{
+        right: -30vw;
+    }
+    to{
+        right: 100vw;
+    }
+}
+body{
+    height: 100vh;
+    background-image: linear-gradient(to right, purple 20%, red, rgb(255, 51, 0));
+    position: relative;
+}
+#moncercle{
+    position: absolute;
+    background:white;
+    border-radius:50%;
+    width:160px;
+    height:160px;
+    left: 430px;
+    top: 350px;
+    animation-name: cloud;
+    animation-duration: 5s;
+    animation-direction: normal;
+    animation-timing-function: linear;
+    animation-delay: 0.5s;
+    animation-iteration-count: infinite;
+}
+#moncercle2{
+    position: absolute;
+    background:white;
+    border-radius:50%;
+    width:160px;
+    height:160px;
+    left: 570px;
+    top: 350px;
+}
+#moncercle3{
+    position: absolute;
+    background:white;
+    border-radius:50%;
+    width:160px;
+    height:160px;
+    left: 500px;
+    top: 280px;
+}

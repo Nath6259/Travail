@@ -1,0 +1,32 @@
+img{
+    max-width: 10%
+}
+header{
+    background-color: cyan
+}
+li{
+    list-style: none;
+    display: inline-block;
+    background-color: cyan;
+    text-align: right;
+    padding: 0.8em 0;
+    border-radius: 50%;
+    margin-left: 10%;
+}
+main{
+    background-color: cyan;
+    
+
+}
+footer{
+    background-color: cyan;
+}
+h1{
+    text-align: center; 
+}
+p{
+    text-align: center; 
+}
+div{
+    text-align: center; 
+}

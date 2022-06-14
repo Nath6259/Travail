@@ -1,0 +1,58 @@
+.nav ul{
+    margin: auto;
+}
+
+
+
+
+@media screen and (min-width:900px) {
+    button{
+        float: none;
+    }
+    .nav ul{
+        width: auto;
+    }
+    .nav li{
+        display: inline-block;
+        font-size: 2rem;
+        margin-left: 7vw;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 500px){
+    li{
+        display: inline-block;
+        text-align: right;
+        margin-left: 80%;
+    }
+}
+@media screen and (min-width: 412px) {
+    
+}

@@ -1,0 +1,93 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* cela permet de cacher l'ascenceur */
+    overflow: hidden;
+}
+#exo{
+    /* j'ajoute un ascenceur sur ma div */
+    overflow-y: auto;
+    height: 100vh;
+    /* Cette propriété permet d'indiquer au scrolling qu'il doit s'arrêter sur certains points défini */
+    scroll-snap-align: y mandatory;
+}
+section{
+    height: 100%;
+    /* J'indique au scroll de s'arrêter au sections */
+    scroll-snap-align: center;
+}
+section:nth-of-type(even){
+    background-color: lightslategrey;
+}
+div{
+    font-size: 20px;
+    flex-wrap: wrap;
+    height: 438px;
+    flex-direction: column;
+    border: 2px solid black;
+}
+.target1{
+    background-color: aqua;
+    width: 15%;
+    display: inline-block;
+    border: 5px solid black;
+    padding: 30px;
+    margin: 20px auto 20px 5px;
+}
+.target2{
+    background-color: red;
+    width: 15%;
+    display: inline-block;
+    border: 5px solid black;
+    padding: 30px;
+    margin: 20px auto 20px 5px;
+}
+.target3{
+    background-color: greenyellow;
+    width: 15%;
+    display: inline-block;
+    border: 5px solid black;
+    padding: 30px;
+    margin: 20px auto 20px 5px;
+}
+.target4{
+    background-color: violet;
+    width: 15%;
+    display: inline-block;
+    border: 5px solid black;
+    padding: 30px;
+    margin: 20px auto 20px 5px;
+}
+.target5{
+    background-color: yellow;
+    width: 15%;
+    display: inline-block;
+    border: 5px solid black;
+    padding: 30px;
+    margin: 20px auto 20px 5px;
+}
+.target6{
+    background-color: blue;
+    width: 15%;
+    display: inline-block;
+    border: 5px solid black;
+    padding: 30px;
+    margin: 20px auto 20px 5px;
+}
+.target7{
+    background-color: rgb(255, 166, 0);
+    width: 15%;
+    display: inline-block;
+    border: 5px solid black;
+    padding: 30px;
+    margin: 20px auto 20px 5px;
+}
+.target8{
+    background-color: rgb(187, 255, 0);
+    width: 15%;
+    display: inline-block;
+    border: 5px solid black;
+    padding: 30px;
+    margin: 20px auto 20px 5px;
+}
