@@ -1,0 +1,72 @@
+*, ::before, ::after{
+    margin: 0;
+    padding:0;
+    box-sizing:border-box
+}
+
+body{
+    width: 70vw;
+    margin: 0 auto;
+}
+form{
+    background-color:steelblue;
+    padding:0 2rem;
+    height: 100px;
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+    justify-content: center;
+}
+h2{
+    color:white;
+    text-align: center;
+    font-size: 1.3rem;;
+}
+input{
+    height: 30px;
+    border: 0;
+}
+input[type=text]{
+    width:70%;
+    padding-left: 10px;
+    outline:0;
+}
+input[type=submit]{
+    width:20%;
+    position :absolute;
+    right:20%;
+    background-color: orange;
+    color:white;
+    
+}
+input[type=submit]:hover{
+    background-color: rgb(235, 100, 3);
+}
+ul{
+    display: flex;
+    flex-direction: column;
+}
+.task{
+    margin-bottom: 0.1rem ;
+    list-style: none;
+    padding : 15px;
+    background-color: lightgrey;
+    box-shadow: 0 2px 1px darkgrey;
+    display:none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:1rem;
+    line-height: 15px;
+}
+
+span{
+    display: none;
+    position: absolute;
+    font-size:1.3rem;
+    font-family: monospace;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+    float:right;
+    color:brown;
+/*     top:15%; */
+}

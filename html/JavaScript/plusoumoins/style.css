@@ -1,0 +1,50 @@
+*, ::before, ::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main{
+    background-image: url(./giant-cat-on-beach.jpg);
+    background-size: cover;
+    padding: 25rem 0;
+    text-align: center;
+    color: rgb(22, 22, 22);
+}
+input{
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+button{
+    height: 40px;
+}
+.card-wrapper{
+    position: relative;
+    min-height: 300px;
+    perspective: 2000px;
+    perspective-origin: top;
+}
+.card-front, .card-back{
+    background-color: aqua;
+    display: flex;
+    position: relative;
+    height: 100%;
+    width: 30%;
+    border-radius: 8px;
+    backface-visibility: hidden;
+    align-content: center;
+    margin-left: 35%;
+}
+.card-front{
+    flex-direction: column;
+}
+.card-back{
+    background-color: rgba(0, 0, 0, 0);
+    padding-top: 20px;
+}
+.card-front img{
+    height: 50%;
+    width: 98%;
+    object-fit: cover;
+    margin: 5px;
+}

@@ -1,0 +1,44 @@
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(./giant-cat-on-beach.jpg);
+    background-size: cover;
+}
+
+.box {
+    display : flex;
+    align-items : center;
+    justify-content : center;
+    padding : 10px ;
+}
+button {
+    padding : 10px;
+    margin : 15px;
+    border-radius : 3px;
+    outline : none;
+    border : none;
+    color : #fff;
+    background-image: linear-gradient(to right, #FC354C 0%, #0ABFBC  51%, #FC354C  100%);
+    cursor: pointer;
+    transition : 0.2s;
+    background-size: 150%;
+}
+button:hover{
+    background-position: right;
+}
+button:active {
+    transform : scale(0.67);
+}
+.resultat {
+    border : solid black 1px;
+    height : 80px;
+    text-align : center;
+    font-weight: bold;
+    padding : 10px;
+}
