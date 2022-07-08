@@ -1,0 +1,217 @@
+*{
+    box-sizing:border-box;
+}
+body {
+    font-family:monospace;
+    /* background-color:#9e9e9e1f */
+    background-image: url(./giant-cat-on-beach.jpg);
+    background-size: cover;
+
+}
+.container{
+    margin: 30 auto;
+    width: 100%;
+}
+.row{
+    display: block;
+    
+    
+}
+hr{
+    border:1px solid #cfcece;
+}
+.gameinfo{
+
+    font-size:13px;
+}
+.gameinfo .gamename{
+    width:100%;
+    text-align:center;
+    font-size:50px;
+    letter-spacing:5px;
+    text-transform:uppercase;
+    color: rgb(56, 54, 54);
+    
+}
+.gameinfo .category{
+    
+    text-align: left;
+    
+}
+.gameinfo .category span{
+text-transform: capitalize;
+    /* color: #15aba3; */
+    color: rgba(2,121,215,255);
+    font-weight:bold;
+}
+.error-left {
+    flex:1;
+    background-color: #ffffff87;
+    padding:10px;
+    height: 190px;
+    
+  
+}
+h1{
+    text-align: center;
+}
+.error1{
+    width:20px;
+    position: relative;
+    margin:auto;
+    left: -60px;
+    top: 50px;
+    font-size: 35px;
+    display: none;
+    
+    
+}
+
+.error2{
+    width:20px;
+    position: relative;
+    margin:auto;
+    left: -30px;
+    bottom: -9px;
+    font-size: 35px;
+    display: none;
+}
+.error3{
+    position: relative;
+    width: 20px;
+    bottom: 32px;
+    display: none;
+    font-size: 35px;
+    margin: auto;
+  
+}
+.error4{
+    position: relative;
+    left: 30px;
+    bottom: 73px;
+    font-size: 35px;
+    width: 20px;
+    margin: auto;
+    display: none;
+    
+    
+}
+.error5 {
+    position: relative;
+    left: 58px;
+    bottom: 114px;
+    font-size: 35px;
+    width: 20px;
+    margin: auto;
+    display: none;
+}
+.error6{
+    position: relative;
+    width: 20px;
+    bottom: 155px;
+    left: 88px;
+    margin: auto;
+    font-size: 35px;
+    display: none;
+}
+.error-left.wrong-1 .error1{
+    display: block;
+}
+.error-left.wrong-2 .error2{
+    display: block;
+}
+.error-left.wrong-3 .error3{
+    display: block;
+}
+.error-left.wrong-4 .error4{
+    display: block;
+}
+.error-left.wrong-5 .error5{
+    display: block;
+}
+.error-left.wrong-6 .error6{
+    display: block;
+}
+
+.letters{
+    flex: 1;
+    padding: 15px;
+    text-align: center;
+    
+}
+.letters .letter-box{
+    width:55px;
+    height: 55px;
+    display: inline-block;
+    /* background-color: #15aba3; */
+    /* background-color: rgba(2,121,215,255); */
+    background-image: linear-gradient(to right, #9235fc 0%, #50cf36  51%, #dfce32  100%);
+    color: #fff;
+    font-size: 24px;
+    margin-right: 10px;
+    line-height: 55px;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 10px;
+    
+}
+.lettersguess{
+    margin: 10px auto;
+    /* background-color: #f8f8f8; */
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    min-height: 104px;
+}
+.lettersguess span{
+width: 60px;
+    height: 60px;
+    font-size: 24px;
+    margin-right: 10px;
+    text-align: center;
+    line-height: 60px;
+    text-transform: uppercase;
+    font-weight: bold;
+    /* background-color: #fdfdfd; */
+    border-bottom: 3px solid #222;
+    transition: .3s;
+}
+span.with-space{
+    background: none; 
+    border-bottom: none;
+    position: relative;
+    
+}
+span.with-space:before{
+    content: ' ';
+    width: 20px;
+    height: 4px;
+    background-color: #222;
+    position: absolute;
+    left: 50%;
+    top:50%;
+    transform: translate(-50% ,-50%);
+}
+
+.clicked {
+    background-color: #222;
+    opacity: 0.2;
+    pointer-events: none;
+}
+
+.finished{
+    pointer-events: none;
+}
+.popup{
+    position: fixed;
+    background-color:#222;
+    padding: 100px 20px;
+    width: 80%;
+    top: 10%;
+    left: 10%;
+    text-align: center;
+    font-size: 40px;
+    border: 1px solid #ccc;
+    color: #fff;
+}

@@ -7,10 +7,12 @@ body{
     display: grid;
     grid-template-rows: auto 1fr auto;
     min-height: 100vh;
+    color: #292929;
+    word-break: break-word;
 }
-/* .main-header{
-    background-color: rgb(19, 19, 219);
-} */
+section{
+    padding: 80px 0px 60px 0px;
+}
 .container{
     margin: 0 auto;
     width: 100%;
@@ -51,18 +53,14 @@ p{
     padding: 10px 0px;
     line-height: 30px;
 }
-main{
-    background-color: rgb(19, 19, 219);
-}
 .main-content{
-    background-color: rgb(19, 19, 219);
-    color: whitesmoke;
     padding-left: 330px;
     padding-top: 35px;
 }
 #button-container{
     margin-top: 50px;
     text-align: center;
+    margin-right: 38%;
 }
 button{
     display: inline-block;
@@ -79,11 +77,100 @@ button{
     cursor: pointer;
     box-shadow: 3px 3px 5px 0px rgba(252, 2, 2, 0.16);
 }
-.main-footer{
+.outer-container{
+    max-width: 1200px;
+    margin: auto;
+}
+.section-title{
+    padding-bottom: 40px;
+    text-align: center;
+}
+.color-skills{
+    background-color: #EBEBEB;
+}
+.item-content{
+    padding: 25px 40px 0px;
+    box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.16);
+    width: 65%;
+    border-radius: 15px;
+}
+#skills .front{
+    color: rgba(2,121,215,255);
+}
+#skills h4{
+    font-size: 22px;
+}
+#skills .item-desc{
+    margin-bottom: 20px;
+}
+.space-between .item.names{
+    margin-top: 8px;
+    font-weight: bold;
+    line-height: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .main-footer{
     background-color: #292929;
     color: rgb(112, 112, 112);
 }
 footer{
     text-align: center;
     padding: 10px;
-}
+} */
