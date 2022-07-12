@@ -1,0 +1,41 @@
+
+@use "variables" as v;
+
+*, ::after, ::before{
+    @include v.reset();
+}
+
+body{
+background-color: rgba(27,47,51,.2);
+font-family: v.$fontPrim;
+width:100vw;
+font-size: 1.15rem;
+}
+
+a{
+    text-decoration: none;
+}
+ section{
+    margin: 4rem 0;
+ }
+h2{
+    font-size:1.5rem;
+    font-family: v.$light;
+    text-transform: uppercase;
+    color: v.$mainColor;
+    text-align: center;
+    position: relative;
+    span{
+        font-size: 5.5rem;
+        font-family: v.$bold;
+        color: v.$secondColor;
+        position:absolute;
+        z-index: -1;
+        top:-40px;
+        left:0;
+        right:0;
+        opacity: 0.15;
+        letter-spacing: 10px;
+
+    }
+}  

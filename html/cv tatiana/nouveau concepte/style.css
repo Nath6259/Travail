@@ -1,0 +1,415 @@
+:root {
+  --clr-titre: #0484fcef;
+  --clr-sec: #00ffb3;
+  --clr-tr: #3271ac;
+  --clr-qr: #30ba93;
+  --spacing: 0.25rem;
+  --radius: 0.5rem;
+}
+
+@font-face {
+  font-family: neon;
+  src: url(./font/Neonderthaw-Regular.ttf);
+}
+
+@font-face {
+  font-family: thegreat;
+  src: url(./font/FrederickatheGreat-Regular.ttf);
+}
+
+@font-face {
+  font-family: kalam;
+  src: url(./font/Kalam-Light.ttf);
+}
+
+@font-face {
+  font-family: tangerine;
+  src: url(./font/Tangerine-Regular.ttf);
+}
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* ---------------------------------------mis en forme------------------------------------------------*/
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: darkgrey;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+header {
+  text-align: center;
+}
+
+nav {
+  border: 3px solid rgba(0, 0, 0, 0);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+main {
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+h1 {
+  font-family: neon, sans-serif;
+  letter-spacing: var(--spacing);
+  color: var(--clr-titre);
+  text-align: center;
+  font-size: 4rem;
+  text-shadow: 5px 5px 5px greenyellow;
+}
+
+h2 {
+  color: var(--clr-sec);
+  text-align: center;
+  font-family: thegreat, sans-serif;
+  font-size: 2rem;
+  text-shadow: 5px 5px 5px rgb(226, 255, 58);
+}
+
+h3 {
+  color: var(--clr-tr);
+  letter-spacing: var(--spacing);
+  font-size: 2rem;
+  font-family: tangerine;
+}
+
+h4 {
+  color: var(--clr-qr);
+  font-family: kalam, sans-serif;
+
+}
+/*----------------------------------- partie d'accueil-------------------------------------------------*/
+.accueil {
+  margin: 25px 25px 25px 25px;
+  background-image: url(./image/zen1.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 100%; 
+}
+
+#titre {
+  text-align: center;
+  padding: 8% 0;
+}
+#titre span{
+opacity: 0;
+}
+
+/* --------------------------------partie personnelle---------------------------------------------------*/
+.aproposdemoi {
+  margin: 25px 25px 25px 25px;
+  display: grid;
+  flex-wrap: wrap;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 100%;
+  background-size: cover;
+}
+
+#perso {
+  margin-left: 20px;
+ }
+
+.container {
+  max-width: 500px;
+  position: relative;
+  margin: 5px 5px 5px 5px;
+  margin-left: 100px;
+  height: 500px;
+  overflow: hidden;
+}
+
+.menu {
+  position: absolute;
+  left: 0;
+  z-index: 11;
+  width: 110%;
+  bottom: 0;
+  text-align:center;
+}
+.menu label {
+  cursor: pointer;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background:var(--clr-tr);
+  border-radius: 50px;
+  margin: 0 0.1em 1em;
+}
+.menu label:hover,.menu label:focus {
+  background:var(--clr-qr);
+}
+.slide-input{
+  opacity: 0;
+}
+.slide-img {
+  width: 500px;
+  height: 450px;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  z-index: 10;
+  transition: left 0s 0.75s;
+  border-radius: 10px 10px 10px 10px
+}
+[id^="slide"]:checked + .slide-img {
+  left: 0;
+  z-index: 100;
+  transition: left 0.65s ease-out;
+}
+
+/* -------------------------------------partie compétence--------------------------------------------------*/
+.competence {
+  margin: 25px 25px 25px 25px;
+}
+ #comp{
+  position: relative;
+     display: grid;
+  gap: 10px;
+  flex-wrap: wrap;
+  grid-template-columns: 1fr 1fr ;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  /* background-color: aquamarine;*/
+}
+
+#comp img{
+  width: 150px; 
+  height: 150px;
+  float: left;
+  opacity: 0.3;
+}
+.competence article{
+
+  /*
+  !faire un hover sur les skills (effets comment si on n'appui )
+  */
+  box-shadow: 10px 10px 10px 15px #cdf745;
+  margin: 15px 15px 15px 15px;
+}
+.com{
+  margin-block-end: -50px;
+
+}
+#front{
+grid-column: 1/2;
+grid-row: 1;
+}
+#back{
+  grid-column: 2/2;
+  grid-row: 2/3;
+}
+#sf{
+  grid-column: 1/2;
+  grid-row: 3/4;
+} 
+#sf1{
+  grid-column: 2/2;
+  grid-row: 4/4;
+} 
+
+/* -------------------------------partie expérience et formation------------------------------------------ */
+.resume {
+  margin: 25px 25px 25px 25px;  
+}
+#par{
+  text-align: center;
+}
+#resume li {
+  padding-bottom: 10px;
+}
+
+#resume li:before {
+  content: '●';
+  padding-right: 10px;
+}
+li{
+  list-style: none;
+}
+#timeline {
+  position: relative;
+  max-width: 100%;
+  margin-left: 0 auto;
+  margin-top: 40px;
+  /* animation-delay: 0.5s; */
+}
+#timeline::after{
+content: '';
+position: absolute;
+width: 5px;
+background-color: #EBEBEB;
+top: 0;
+bottom: 0;
+left: 190px;
+}
+#timeline .event .right {
+  text-align: left;
+  padding-bottom: 5px;
+  transition: opacity 0.3s linear, transform 0.5s ease-out;
+  /* font-family: 'Montserrat', sans-serif; */
+}
+#resume li {
+  padding-bottom: 10px;
+}
+
+#resume li:before {
+  content: '●';
+  padding-right: 10px;
+}
+.event {
+  position: relative;
+  width: inherit;
+  animation-duration: 1.5s;
+
+}
+.event .left {
+  position: absolute;
+  top: calc(50% - 30px);
+  /* font-family: 'Montserrat', sans-serif; */
+  font-size: 15px;
+  font-weight: 500;
+  text-align: center;
+  line-height: 20px;
+  width: 132px;
+}
+
+.event h4 {
+  padding-bottom: 10px;
+}
+
+.event h4 i {
+  width: 45px;
+}
+
+.event.work h4 {
+  color: #3498DB;
+}
+
+.event .right {
+  padding: 20px 0px 40px;
+  position: relative;
+  background-color: inherit;
+  margin-left: 290px;
+}
+
+.event .right::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: #EBEBEB;
+  top: calc(50% - 12px);
+  border-radius: 50%;
+  z-index: 1;
+  left:-110px;
+}
+
+.event .right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: calc(50% - 10px);
+  width: 0;
+  z-index: 1;
+  left: -10px;
+  border: medium solid #EBEBEB ;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent #EBEBEB transparent transparent;
+}
+
+.event .right .content {
+  padding: 30px 40px 20px 40px;
+  font-size: 16px;
+  background-color: #ebebeb60 ;
+  position: relative;
+  line-height: 26px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  -webkit-box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.16);
+  -moz-box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.16);
+  box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.16);
+}
+/*  animation */
+
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(100%,);
+    transform: translateY(100%);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------- */
+.projets {
+  margin: 25px 25px 25px 25px;
+  background-color: blueviolet;
+  width: 100%;
+}
+
+.ligne {
+  margin-top: 50px;
+  height: 2px;
+  width: 100%;
+  background-color: chartreuse;
+}
+
+footer {
+  margin: 25px 25px 25px 25px;
+  margin-bottom: 0;
+}
+
+#contact {
+  margin: 15px 15px 15px 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  list-style: none;
+}
+
+.fa-envelope,
+.fa-github-square {
+  color: chartreuse
+}
+
+/* http://www.delphine-scepanek.fr/
+  responsive pour la taille de l'image */
+

@@ -1,0 +1,243 @@
+*,::before,::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: 0;
+}
+body{
+    background-color: rgb(238, 184, 190);
+}
+
+@font-face{
+    font-family:"quantico";
+    src: url(./Quantico/Quantico-Regular.ttf);
+}
+@font-face{
+    font-family:"pressstart";
+    src: url(./Press_Start_2P/PressStart2P-Regular.ttf);
+}
+@font-face{
+    font-family:"bungee";
+    src: url(./Bungee/Bungee-Regular.ttf);
+}
+h1{     
+    font-family:"pressstart";
+    font-size: 4rem;
+}
+h2{
+    font-family:"bungee";
+}
+li{
+    font-family:"quantico"
+}
+.box1 p{
+    font-family:"quantico";
+}
+li{
+    list-style: none;
+}
+div{
+    border: 2px solid black;
+}
+.BoxMe div{
+    text-align: center;
+}
+.BoxCmpt div{
+    width: 50vw;
+    height: 40vh;
+    text-align: center;
+}
+.BoxExp div{
+    width: 50vw;
+    height: 40vh;
+    text-align: center;
+}
+/* <!-- -------------banner------------- --> */
+header{
+    display: flex;
+    justify-content: center;
+    margin: 3vh;
+}
+.banner{
+    background-color:  whitesmoke;
+    box-shadow: 3px 3px 3px 2px rgba(0, 0, 0, 0.2);;
+    margin: 5vh;
+    border: 2px ;
+    display: flex;
+    width: auto;
+    height: 10vh;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    padding: 2vh;
+}
+/* <!-- -------------Profil et objectifs------------- --> */
+.BoxMe h2{
+    text-align: center;
+}
+.BoxMe{
+    display: grid;
+    grid-template-areas: 
+    "box1 side1"
+    "side2 box2"
+    "box3 side3";
+}
+.box1{
+    height: 50vh;
+    margin-left: 4vw;
+    max-width: 70%;
+    background-color:  whitesmoke;
+    box-shadow: 3px 3px 3px 2px rgba(0, 0, 0, 0.2);;
+    border: 2px ;
+    border-radius: 50%;
+    outline: 10px solid rgb(173, 92, 92);
+    outline-offset: -20px;
+    grid-area: box1;
+}
+.box1side{
+    height: 50vh;
+    margin-left: 4vw;
+    max-width: 70%;
+    background-color:  whitesmoke;
+    box-shadow: 3px 3px 3px 2px rgba(0, 0, 0, 0.2);;
+    border: 2px ;
+    border-radius: 20px;
+
+    grid-area: side1;
+}
+
+.box2{
+    width: 50vw;
+    height: 40vh;
+    margin-left: 4vw;
+    max-width: 70%;
+    background-color:  whitesmoke;
+    box-shadow: 3px 3px 3px 2px rgba(0, 0, 0, 0.2);;
+    border: 2px ;
+    border-radius: 20px;
+    grid-area: box2;
+}
+.box2side{
+    width: auto;
+    height: auto;
+    grid-area: side2;
+}
+.box3{
+    width: 50vw;
+    height: 40vh;
+    margin-left: 4vw;
+    max-width: 70%;
+    background-color:  whitesmoke;
+    box-shadow: 3px 3px 3px 2px rgba(0, 0, 0, 0.2);;
+    border: 2px ;
+    border-radius: 20px;
+    grid-area: box3;
+}
+.box3side{
+    width: auto;
+    height: auto;
+    grid-area: side3;
+}
+/* <!-------------------------- Compétences ----------------------------> */
+.BoxCmpt h2{
+    text-align: center;
+}
+.BoxCmpt{
+    display: grid;
+    grid-template-areas: 
+    "cmpt1side cmpt1"
+    "cmpt2 cmpt2side";
+}
+
+.cmpt1{
+    width: 50vw;
+    height: 40vh;
+    margin-left: 4vw;
+    max-width: 70%;
+    background-color:  whitesmoke;
+    box-shadow: 3px 3px 3px 2px rgba(0, 0, 0, 0.2);;
+    border: 2px ;
+    border-radius: 20px;
+    grid-area:cmpt1;
+}
+.cmpt1side{
+    width: auto;
+    height: auto;
+    grid-area: cmpt1side;
+}
+.cmpt2{
+    width: 50vw;
+    height: 40vh;
+    margin-left: 4vw;
+    max-width: 70%;
+    background-color:  whitesmoke;
+    box-shadow: 3px 3px 3px 2px rgba(0, 0, 0, 0.2);;
+    border: 2px ;
+    border-radius: 20px;
+    grid-area: cmpt2;
+}
+.cmpt2side{
+        width: auto;
+        height: auto;
+        grid-area: cmpt2side;
+}
+
+/* <!-------------------------- Expériences ----------------------------> */
+.BoxExp h2{
+    text-align: center;
+}
+.BoxExp{
+    display: grid;
+    grid-template-areas: 
+    "exp1side exp1"
+    "exp2 exp2side"
+    "exp3side exp3";
+}
+.exp1{
+    width: 50vw;
+    height: 40vh;
+    margin-left: 4vw;
+    max-width: 70%;
+    background-color:  whitesmoke;
+    box-shadow: 3px 3px 3px 2px rgba(0, 0, 0, 0.2);;
+    border: 2px ;
+    border-radius: 20px;
+    grid-area: exp1;
+}
+.exp1side{
+    width: auto;
+    height: auto;
+    grid-area: exp1side;
+}
+.exp2{
+    width: 50vw;
+    height: 40vh;
+    margin-left: 4vw;
+    max-width: 70%;
+    background-color:  whitesmoke;
+    box-shadow: 3px 3px 3px 2px rgba(0, 0, 0, 0.2);;
+    border: 2px ;
+    border-radius: 20px;
+    grid-area: exp2;
+}
+.exp2side{
+    width: auto;
+    height: auto;
+    grid-area: exp2side;
+}
+.exp3{
+    width: 50vw;
+    height: 40vh;
+    margin-left: 4vw;
+    max-width: 70%;
+    background-color:  whitesmoke;
+    box-shadow: 3px 3px 3px 2px rgba(0, 0, 0, 0.2);;
+    border: 2px ;
+    border-radius: 20px;
+    grid-area: exp3;
+}
+.exp3side{
+    width: auto;
+    height: auto;
+    grid-area: exp3side;
+}
+

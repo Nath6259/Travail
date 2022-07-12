@@ -1,0 +1,47 @@
+@font-face {
+    font-family: Barlow;
+    src: url(../fonts/Barlow/Barlow-Regular.ttf);
+}
+
+@font-face {
+    font-family: Barlow-light;
+    src: url(../fonts/Barlow/Barlow-Light.ttf);
+}
+
+@font-face {
+    font-family: Barlow-medium;
+    src: url(../fonts/Barlow/Barlow-Medium.ttf);
+}
+
+@font-face {
+    font-family: Barlow-bold;
+    src: url(../fonts/Barlow/Barlow-Bold.ttf);
+}
+$mainColor : #D73512;
+$secondColor : #768B98;
+$bgColor: #E5E5E5;
+$corail : #e46345;
+$vert : #77b295;
+$jaune : #eda211;
+$lavande: #8aabd2;
+$fontPrim: Barlow;
+$light: Barlow-light;
+$medium: Barlow-medium;
+$bold: Barlow-bold;
+
+@mixin size ($w, $h){
+    width:$w;
+    height:$h;
+}
+
+@mixin reset{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+@mixin flex-align($jc:flex-start, $ai:flex-start){
+justify-content: $jc;
+    align-items: $ai;
+}
+

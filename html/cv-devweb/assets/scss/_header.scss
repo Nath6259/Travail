@@ -1,0 +1,78 @@
+@use "variables" as v;
+
+header{
+    @include v.size(100vw,100vh);
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0,0,0,0.6)), url("../images/bg-grey.jpg");
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+/* ******* NAVBAR ******* */
+    .navbar {
+        position:fixed;
+        top:0;
+        background-color: rgba(0,0,0,.4);
+        ul{
+            @include v.size (100vw, 50px);
+            display: flex;
+            @include v.flex-align($jc:flex-end, $ai:center);
+            gap: 30px;
+            padding-right: 80px;
+            li{
+                list-style-type: none;
+                &:first-child i{
+                    font-size: 1.3rem;
+                }
+                &:hover a{
+                    border-bottom: 2px solid white;
+                }
+                a{
+                    color:white;
+                    font-size:1.1rem;
+                    text-transform: uppercase;
+                    font-family: v.$fontPrim;
+                    text-decoration: none;   
+                }
+            }
+        }
+    }
+/* ******* HEADER-CENTER ******* */
+    .header-center{
+        @include v.size(100%, calc(100% - 50px));
+        display: flex;
+        flex-direction: column;
+        @include v.flex-align($jc:center, $ai:center);
+        gap:15%;
+        .intro{
+            font-family: v.$fontPrim;
+            color:white;
+            font-size:4rem;
+            span{
+                font-size: 5rem;
+                font-weight: bold;
+            }
+        }
+        .main-skills{
+            display: flex;
+            @include v.flex-align($jc:center, $ai:center);
+            gap: 80%;
+            .skill{
+                display: flex;
+                flex-direction: column;
+                gap:25px;
+                @include v.flex-align($jc:center, $ai:center);
+                i{
+                    font-size: 5rem;
+                    color: white;
+                }
+                p{
+                    font-family: v.$fontPrim;
+                    color:white;
+                    font-weight: 600;
+                }
+                }
+            }
+    }
+
+/* ******* FIN HEADER-CENTER ******* */
