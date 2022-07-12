@@ -33,34 +33,47 @@
  */
 let painting = false;
 const canvas = document.querySelector('canvas');
+const ctx = canvas.getContext("2d");
+function resize(){
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+}
+resize();
+window.addEventListener("resize", resize);
+let x = 0;
+let y = 0;
 
 function startPosition(e){
     painting = true;
     draw(e);
 }
 
-function finishedPosition(e){
+function finishedPosition(){
     painting = false;
     ctx.beginPath();
 }
 
 function draw(e){
     if(painting == false){
-    return draw(e)
+    return
     }else{
-        ctx.beginPath();
+        let bound = canvas.getBoundingClientRect();
+        console.log(bound);
+        x = e.clientX - bound.left;
+        y = e.clientY - bound.top;
         ctx.lineWidth = 10;
-        ctx.strokeStyle = "black";
+        ctx.strokeStyle = "black"
         ctx.lineCap = "round";
+        console.log(x,y);
         ctx.lineTo(x,y);
-        ctx.stroke();
-        ctx.beginPath();
+        ctx.stroke()
+        ctx.beginPath()
         ctx.moveTo(x,y);
     }
 }
-mousedown = addEventListener("mousedown", startPosition);
-mouseup = addEventListener("mouseup", finishedPosition);
-mousemove = addEventListener("mousemove", draw);
+canvas.addEventListener("mousedown", startPosition);
+canvas.addEventListener("mouseup", finishedPosition);
+canvas.addEventListener("mousemove", draw);
 
 
 
