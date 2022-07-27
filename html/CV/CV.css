@@ -4,11 +4,13 @@
     box-sizing: border-box;
 }
 body{
+    font-family: 'Roboto', sans-serif;
     display: grid;
     grid-template-rows: auto 1fr auto;
     min-height: 100vh;
     color: #292929;
     word-break: break-word;
+    /* scroll-behavior: smooth; */
 }
 section{
     padding: 80px 0px 60px 0px;
@@ -19,10 +21,15 @@ section{
 }
 a{
     text-decoration: none;
-    color: whitesmoke;
+    color: #805D93;
+    display: contents;
 }
 nav{
     background-color: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
+    font-size: 15px;
 }
 #top-menu{
     list-style: none;
@@ -46,6 +53,7 @@ nav{
     width: 100px;
     padding-top: 13px;
 }
+
 h2{
     padding-bottom: 25px;
 }
@@ -53,14 +61,28 @@ p{
     padding: 10px 0px;
     line-height: 30px;
 }
-.main-content{
-    padding-left: 330px;
+.box-text{
+    padding-left: 440px;
     padding-top: 35px;
+}
+img{
+    width: 75%;
+}
+.img-container{
+    position: absolute;
+    width: 29%;
+    left: 90px;
+    top: 88px;
 }
 #button-container{
     margin-top: 50px;
     text-align: center;
-    margin-right: 38%;
+}
+#const{
+    background-color: #3FA8FD;
+}
+#CV{
+    background-color: #2FDC9C;
 }
 button{
     display: inline-block;
@@ -69,7 +91,6 @@ button{
     text-align: center;
     text-transform: uppercase;
     color: white;
-    background-color: #2FDC9C;;
     font-weight: 500;
     font-size: 17px;
     padding: 20px 50px;
@@ -86,9 +107,11 @@ button{
     text-align: center;
 }
 .section-title2{
-    padding-bottom: 40px;
+    position: absolute;
+    right: 560px;
+    top: 90px;
 }
-.color-skills{
+.color-background{
     background-color: #EBEBEB;
 }
 .item-content{
@@ -97,6 +120,7 @@ button{
     width: 65%;
     border-radius: 15px;
     margin-bottom: 40px;
+    background-color: white;
 }
 #skills .front{
     color: rgba(2,121,215,255);
@@ -147,8 +171,11 @@ ul{
     text-align: center;
     line-height: 20px;
     width: 132px;
-    top: 2340px;
+    top: 2550px;
     left: 140px;
+    background-color: #EBEBEB;
+    box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.16);
+    border-radius: 50%;
 }
 .right{
     padding: 20px 0px 40px;
@@ -164,76 +191,129 @@ ul{
 }
 .place{
     margin-bottom: 30px;
+    font-size: 17px;
 }
 .content h3{
     padding-bottom: 10px;
     margin-top: 10px;
+    color: rgba(2,121,215,255)
 }
 .content li{
     padding-bottom: 10px;
     margin-top: 10px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* .main-footer{
+#two{
+    margin-top: 125px;
+}
+#two .left{
+    top: 2950px;
+}
+#three .left{
+    top: 3320px;
+}
+#three{
+    margin-top: 125px;
+}
+.contact-subtitle{
+    text-align: center;
+    margin: 10px 0px 70px;
+    font-size: 20px;
+}
+.material-symbols-outlined{
+    margin-top: 25px;
+    font-size: 80px;
+}
+.phone{
+    text-align: center;
+    background-color: #EFE5F3;
+    color: #9B59B6;
+    width: 300px;
+    height: 150px;
+    border-radius: 15px;
+}
+.text{
+    font-weight: 700;
+}
+.email{
+    text-align: center;
+    background-color: #E0EFF9;
+    color: #3498DB;
+    width: 300px;
+    height: 150px;
+    border-radius: 15px;
+}
+#contact .space-between{
+    display: flex;
+    justify-content: space-around;
+}
+.meet{
+    text-align: center;
+    background-color: #DFF7E9;
+    color: #2ECC71;
+    width: 300px;
+    height: 150px;
+    border-radius: 15px;
+    padding-top: 28px;
+    font-size: 18px;
+}
+.meet p{
+    color: #707070;
+}
+.main-footer{
     background-color: #292929;
     color: rgb(112, 112, 112);
 }
 footer{
     text-align: center;
     padding: 10px;
-} */
+}
+@media screen and (min-width:1200px) {
+    .section-title2{
+        right: 540px;
+    }
+    .img-container{
+        width: 25%;
+        left: 170px;
+    }
+    .left{
+        top: 2680px;
+    }
+    #two .left{
+        top: 3080px;
+    }
+    #three .left{
+        top: 3440px;
+    }
+    .outer-container{
+        margin: auto;
+    }
+    img{
+        width: 85%;
+    }
+}
+@media screen and (min-width:1890px) {
+    .section-title2{
+        right: 923px;
+    }
+    .img-container{
+        width: 25%;
+        left: 320px;
+    }
+    .left{
+        left: 390px;
+        top: 2510px;
+    }
+    #two .left{
+        top: 2900px;
+    }
+    #three .left{
+        top: 3260px;
+    }
+    .outer-container{
+        max-width: 1200px;
+        margin: auto;
+    }
+    img{
+        width: 65%;
+    }
+}
