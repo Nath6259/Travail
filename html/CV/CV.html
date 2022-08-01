@@ -6,23 +6,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nathan HERMAND CV</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" /> -->
     <link rel="stylesheet" href="CV.css">
     <script src="./CV.js" defer></script>
 </head>
 <body>
-    <header class="main-header">
-        <div class="container clearfix">
-            <nav id="top-menu-nav">
-                <ul id="top-menu" class="nav">
-                    <li id="menu-item-1" class="menu-item"><a href="#main-content">Présentation</a></li>
-                    <li id="menu-item-2" class="menu-item"><a href="#skills">Compétences</a></li>
-                    <li id="menu-item-3" class="menu-item"><a href="#experience">Parcours</a></li>
-                    <li id="menu-item-4" class="menu-item"><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
+    <nav id="top-menu-nav">
+        <ul id="top-menu" class="nav">
+            <li id="menu-item-1" class="menu-item"><a href="#main-content">Présentation</a></li>
+            <li id="menu-item-2" class="menu-item"><a href="#skills">Compétences</a></li>
+            <li id="menu-item-3" class="menu-item"><a href="#experience">Parcours</a></li>
+            <li id="menu-item-4" class="menu-item"><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="parallax-outer">
+        <div class="parallax" id="home">
+            <div class="outer-container" id="homepage">
+                <header>
+                    Bonjour, je m'appelle Nathan et je suis
+                    <h1>Développeur web front-end et back-end</h1>
+                </header>
+
+                <div id="header-text">
+                    Je suis à la recherche d'un <strong>stage</strong> à <strong>Hénin-Beaumont</strong> et alentours à partir de <strong>juillet 2022</strong>.
+                </div>
+
+                <div class="icons">
+                    <div class="code icon">
+                        <span class="material-symbols-outlined">
+                            code
+                        </span>
+                        <div class="text1">front-end</div>
+                    </div>
+                    <div class="storage icon">
+                        <span class="material-symbols-outlined">
+                            database
+                        </span>
+                        <div class="text1">back-end</div>
+                    </div>
+                    <div class="mobile icon">
+                        <span class="material-symbols-outlined">
+                            smartphone
+                        </span>
+                        <div class="text1">mobile</div>
+                    </div>
+                    <div class="language icon">
+                        <span class="material-symbols-outlined">
+                            language
+                        </span>
+                        <div class="text1">anglais</div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </header>
+    </div>
 
     <main>
         <section id="main-content" class="outer-container">
@@ -50,7 +88,7 @@
                     <a href="#contact">
                         <button id="const">Me contacter</button>
                     </a>
-                    <button id="CV">Télécharger mon cv</button>
+                    <button id="CV" type="submit" onclick="window.open('nathan.jpg')">Télécharger mon cv</button>
                 </div>
             </div>
         </section>
@@ -81,7 +119,7 @@
                                     <div class="item names2">
                                         Angular
                                         <br>
-                                        Placeholder
+                                        jQuery
                                         <br>
                                         Placeholder
                                         <br>
@@ -223,7 +261,7 @@
                     <div class="item contact-box email">
                         <span class="material-symbols-outlined">
                             mail
-                            </span>
+                        </span>
                         <div class="text">nathan6259115@gmail.com</div>
                     </div>
                     <div class="item contact-box meet">
@@ -234,20 +272,6 @@
             </div>
         </section>
     </main>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <footer class="main-footer">
         <div id="footer-bottom">
             <div class="container clearfix">

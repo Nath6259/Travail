@@ -1,0 +1,65 @@
+*, ::before, ::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.video {
+    width: 70%;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+}
+.controls{
+    width: 70%;
+    padding: 7px;
+    display: flex;
+    align-items: center;
+    background: #505050;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
+.controls * {
+    margin: 0 2px;
+    padding: 1px;
+}
+.slider{
+    width: 100%;
+    height: 0.5rem;
+    cursor: pointer;
+}
+.timer{
+    color: #f4f4f4;
+}
+.controls button{
+    background: transparent;
+    color: #f4f4f4;
+    border: none;
+}
+.controls .playPauseBtn{
+    color: #eaff30;
+    cursor: pointer;
+}
+.controls .stop{
+    color: #d630ff;
+    cursor: pointer;
+}
+.volume{
+    color: #a9a9ff;
+    cursor: pointer;
+}
+i {
+    pointer-events: none;
+}
+button input{
+    cursor: pointer;
+}
+.expand{
+    cursor: pointer;
+}

@@ -24,11 +24,44 @@
  * En cas de non reconnaissance de la commande :
  * Vérifier si c'est en global que NPM est bien dans les variables d'environnement
  * et si l'éxecution est bloqué, lancer:
- *  "set-executionpolicy"
+ *  "set-executionpolicy remotesigned" dans powershell en administrateur.
+ * Pour compiler un fichier :
+ * (npx) tsc "chemin vers le fichier"
+ * Pour compiler dans un dossier différent :
+ * (npx) tsc "chemin vers le fichier" --outDir "chemin vers le dossier js"
+ *
+ * Il est possible de créer un fichier tsconfig.json à la racine de notre projet
+ * afin d'éviter de nous répéter.
+ * l'option compilerOptions: {outDir: "chemin vers le dossier"}
+ * permet de ne pas avoir à retaper le dossier de sortie à chaque fois.
+ * L'option files: [] permet de lister les fichiers à compiler.
+ * Une fois cela fait, nous avons juste à taper :
+ * (npx) tsc
+ * Maisla encore, c'est trop demander aux développeurs.
+ * (npx) tsc --watch
+ * Permettra de lancer une surveillance de nos fichiers ts, et de compiler à chaque
+ * sauvegarde
  */
-var btn = document.querySelector("#compte");
-var i = 0;
-btn === null || btn === void 0 ? void 0 : btn.addEventListener("pointerdown", function () {
-    i++;
-    btn.textContent = i;
-});
+// const btn = document.querySelector("#compte");
+// let i = 0;
+// btn.addEventListener("pointerdown", ()=>{
+//     i++;
+//     // btn?.textContent = i;
+// })
+/**
+ * Par défaut, Typescript compile pour des navigateurs agé.
+ * On peut lui indiquer de compiler pour une version plus moderne
+ * en ajoutant l'option "target": "ES****"
+ *
+ * Malgré qu'il détecte une erreur, il nous compile notre code.
+ * Mais on peut lui indiquer de ne pas compiler en cas d'erreur.
+ */
+// btn.style.backgroundcolor = "orange";
+// Pafois il peut nous donner de bonnes indications sur l'erreur en passant la souris
+// au dessus
+// btns.style.backgroundcolor = "orange";
+/**
+ * Si on souhaite, on peut ajouter l'option "strict" à true pour que TS nous indique
+ * la moindre petite erreur
+ */
+console.log("coucou");

@@ -42,12 +42,12 @@
  * Permettra de lancer une surveillance de nos fichiers ts, et de compiler à chaque
  * sauvegarde
  */
-const btn = document.querySelector("#compte");
-let i = 0;
-btn.addEventListener("pointerdown", ()=>{
-    i++;
-    // btn?.textContent = i;
-})
+// const btn = document.querySelector("#compte");
+// let i = 0;
+// btn.addEventListener("pointerdown", ()=>{
+//     i++;
+//     // btn?.textContent = i;
+// })
 /**
  * Par défaut, Typescript compile pour des navigateurs agé.
  * On peut lui indiquer de compiler pour une version plus moderne
@@ -64,3 +64,4 @@ btn.addEventListener("pointerdown", ()=>{
  * Si on souhaite, on peut ajouter l'option "strict" à true pour que TS nous indique
  * la moindre petite erreur
  */
+console.log("coucou");

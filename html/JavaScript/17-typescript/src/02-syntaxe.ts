@@ -32,3 +32,72 @@ const person: {prenom: string, age?: number} = {prenom: "maurice"};
 // Si le nombre de propriété de notre objet est variable, on peut faire cela :
 const person2: {prenom: string, [key: string]: string} = {prenom: "Paul", nom: "Dupont", age: "54"};
 // Chaque autre propriété sera un string contenant un string.
+/**
+ * Nos variables peuvent parfois contenir des objets créé à partir de classe
+ * ou des fonctions, cela fonctionnera de la facon suivante :
+ */
+const today: Date = new Date();
+const salut: Function = function(){}
+
+/**
+ * En parlant de fonction on pourra typer les arguments et les valeurs de retour.
+ * le mot clef void indique ici que notre fonction ne retourne rien.
+ */
+function clickMoi(e: PointerEvent): void{
+    console.log("Merci de cliquer sur", e.target);
+}
+// Si l'argument ne correspond pas, ce sera une erreur.
+// document.addEventListener("click", clickMoi);
+document.addEventListener("pointerdown", clickMoi);
+
+const compte: (nom: string)=> number = (nom)=>{return nom.length}
+// Le premier est une erreur, le second n'en est pas une.
+// compte(54)
+compte("truc")
+
+// Le readonly permet d'indiquer que l'argument ne doit pas être modifié.
+function tri(arg: readonly any[]): any[]{
+    // return arg.sort();
+    return [...arg].sort();
+}
+/**
+ * La plupart du temps, indiquer le type n'est pas obligatoire, il permet juste une
+ * relecture plus facile, comprendre directement ce que contient une variable.
+ * Si on ne met pas de type, Typescript tentera de deviner par lui même.
+ * 
+ * Ici il refuse de mettre "bonjour" dans x car la première valeur de x étant un nombre
+ * Il indiquera que x doit toujours être de type nombre.
+ */
+let x = 5;
+// x = "bonjour";
+/**
+ * Mais parfois il reste important d'indiquer le type de notre variable.
+ * car Typescript peut se tromper.
+ */
+// const btn1 = document.querySelector("#compte") as HTMLButtonElement;
+// btn1.style.color = "red";
+/**
+ * Cette première facon dira à TS que notre querySelector retourne un HTMLButtonElement
+ * au lieu de simple Element.
+ * ! Attention, par défaut typescript sait que querySelector peut être null.
+ * ! Mais cette facon de faire, lui retire cette possibilité.
+ * const btn1 = <HTMLButtonElement>document.querySelector("#compte")
+ * Cette dernière facon lui indiquera que le querySelector sera soit HTMLButtonElement
+ * soit null, plutôt que de réécrire totalement les retours possible.
+ * const btn1 = document.querySelector<HTMLButtonElement>("#compte")
+ * 
+ * const btn = document.querySelector<HTMLButtonElement>("#compte")!
+ */
+const btn1 = document.querySelector<HTMLButtonElement>("#compte");
+if(btn1){
+    btn1.style.color = "red";
+}
+
+/**
+ * Parfois une variable peut avoir un ou plusieurs types différents.
+ * Dans ce cas on utilisera l'union type.
+ */
+let y: string|number|boolean = 5;
+y = "salut";
+y= true;
+// y= [];

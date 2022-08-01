@@ -1,0 +1,26 @@
+<h1>Bienvenue {{ title }}!</h1>
+<!-- <h2>{{ recetteList[1].name }}</h2> -->
+<!-- <a [href]="recetteList[0].name">exemple</a>
+<a [attr.href]="recetteList[0].name">exemple</a>
+<div [class.super]="9<8">test</div>
+<div [style.color]="9<8?'red':'green'">test 2</div>
+<p (click)="selectRecette(recetteList[0])">{{recetteList[0].name}}</p> -->
+<input type="number" #inputRecette (keyup.enter)="selectRecette(inputRecette.value)">
+<p *ngIf="recetteSelected">Vous avez selectionné: {{ recetteSelected.name }}</p>
+<p *ngIf="!recetteSelected">Aucune recette selectionnée</p>
+<p *ngFor="let rec of recetteList"><strong>Nom :</strong> {{rec.name}}
+<!-- <span *ngFor="let ing of rec.ingredients">{{ing}}</span> -->
+</p>
+<!-- 
+  Créer des cartes qui affichent la phto, le nom, le type, la description et la date
+  de création de chaque recette.
+ -->
+<div *ngFor="let rec of recetteList" class="card" style="width: 18rem;">
+  <img class="card-img-top" src="{{rec.images}}" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">{{rec.name}}</h5>
+    <p class="card-text">{{rec.ingredients}}</p>
+    <a href="#" class="btn btn-primary">En savoir plus</a>
+  </div>
+</div>
+<router-outlet></router-outlet>
