@@ -1,0 +1,2 @@
+Toute les modifications sont faits dans C:\xampp\htdocs\DWWM06\06-php\01-syntaxe voir C:\xampp\htdocs\DWWM06\06-php si d'autre fichier seront modifier
+dans d'autre dossier, ce dossier est juste pour tout regrouper au même endroit.

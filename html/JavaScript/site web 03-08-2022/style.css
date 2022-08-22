@@ -1,0 +1,219 @@
+*, ::before, ::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+}
+/* nav-bar */
+nav{
+    background-color: rgb(57, 21, 82);
+    position: relative;
+    z-index: 9999;
+    width: 70%;
+    margin-left: 263px;
+    font-size: 15px;
+    bottom: 40px;
+}
+#top-menu{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.menu-item{
+    padding-top: 15px;
+    text-align: center;
+    height: 50px;
+}
+a{
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+/* fin nav bar */
+
+/* Qui somme-nous ? */
+.who{
+    text-align: center;
+    position: relative;
+}
+.who .title{
+    text-transform: uppercase;
+    color: rgb(57, 21, 82);
+    font-size: 25px;
+    margin-bottom: 43px;
+    font-weight: 600;
+}
+.desc{
+    color: gray;
+    margin-bottom: 25px;
+}
+.space-between .plus{
+    display: inline-block;
+    padding: 10px 50px 20px;
+    width: 16%;
+}
+.plus i{
+    font-size: 40px;
+    margin-bottom: 30px;
+    color: yellowgreen;
+    background-color: rgb(57, 21, 82);
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+}
+.plus{
+    font-size: 18px;
+    color: rgb(57, 21, 82);
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.and-more{
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+.and-more button{
+    background-color: yellowgreen;
+    color: white;
+    border: none;
+    padding: 10px 10px 10px;
+    font-weight: 600;
+}
+.img-container{
+    background: url("./images/montagne.jpg");
+    width: 67%;
+    margin-left: 16%;
+}
+.img-container .title-our{
+    color: white;
+    font-weight: 600;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.span, .DD, .DF{
+    background-color: white;
+    color: rgb(176, 80, 255);
+    margin: 10px;
+    padding-left: 45px;
+    padding-right: 45px;
+    border: 8px solid white;
+}
+.Simu{
+    padding-left: 29px;
+    padding-right: 29px;
+}
+.DD2{
+    background-color: rgba(235, 233, 233, 0.212);
+}
+.Simu2{
+    background-color: rgba(235, 233, 233, 0.308);
+}
+.DF2{
+    background-color: rgba(235, 233, 233, 0.308);
+}
+.span i{
+    color: rgb(176, 80, 255);
+    margin-bottom: 15px;
+    margin-top: 20px;
+    font-size: 25px;
+}
+.cards{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.span button{
+    background-color: rgb(176, 80, 255);
+    color: white;
+    border: none;
+    padding: 10px 10px 10px;
+    font-weight: 600;
+}
+.p-title{
+    margin-bottom: 42px;
+    font-weight: 600;
+}
+.p-title2{
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+.p-desc{
+    color: gray;
+}
+.escape{
+    margin-top: 78px;
+    margin-bottom: 20px;
+}
+.escape2{
+    margin-top: 77px;
+    margin-bottom: 20px;
+}
+.escape3{
+    margin-top: 59px;
+    margin-bottom: 20px;
+}
+/* que recherchez-vous ? */
+.search{
+    background-color: #EBEBEB;
+}
+.title{
+    text-transform: uppercase;
+    color: rgb(57, 21, 82);
+    font-size: 25px;
+    font-weight: 600;
+    text-align: center;
+    position: relative;
+}
+.space{
+    padding-top: 43px;
+    padding-bottom: 43px;
+}
+.goods-btn{
+    padding-right: 150px;
+}
+.select, .twin-btn{
+    display: flex;
+    justify-content: center;
+}
+.goods{
+    margin-right: 50px;
+}
+.locate{
+    margin-right: 50px;
+}
+.twin1{
+    margin-right: 40px;
+    margin-left: 20px;
+}
+.twin2{
+    margin-right: 40px;
+    margin-left: 20px;
+}
+.indication{
+    font-weight: 600;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+.de, .À{
+    font-weight: 600;
+    font-size: 12px;
+}
+.launch-search{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    align-items: center;
+}
+.launch-search button{
+    background-color: yellowgreen;
+    color: white;
+    border: none;
+    padding: 10px 10px 10px;
+    font-weight: 600;
+}

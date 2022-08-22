@@ -1,0 +1,23 @@
+<p>liste-recette works!</p>
+<input type="number" #inputRecette (keyup.enter)="selectRecette(inputRecette.value)">
+<p *ngIf="recetteSelected">Vous avez selectionné: {{ recetteSelected.name }}</p>
+<p *ngIf="!recetteSelected">Aucune recette selectionnée</p>
+<p *ngFor="let rec of recetteList"><strong>Nom :</strong> {{rec.name}}
+<!-- <span *ngFor="let ing of rec.ingredients">{{ing}}</span> -->
+</p>
+<!-- 
+  Créer des cartes qui affichent la phto, le nom, le type, la description et la date
+  de création de chaque recette.
+ -->
+<div class="cardparent">
+  <div *ngFor="let rec of recetteList" appBorderCard="red" class="card" style="width: 18rem;">
+    <img class="card-img-top" src="{{rec.images}}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title"><strong>Nom : </strong>{{rec.name | uppercase}}</h5>
+      <p><strong>Durée : </strong>{{rec.duration}} minutes</p>
+      <p class="card-text"><strong>description : </strong>{{rec.description}}</p>
+      <p><strong>Crée le : </strong>{{rec.createdAt | date:"dd/MM/yyyy"}}</p>
+    </div>
+    <span class="type" style="background-color:{{rec.type|typeColor}}">{{rec.type}}</span>
+  </div>
+</div>

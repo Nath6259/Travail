@@ -1,0 +1,13 @@
+*, ::before, ::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.cardparent{
+    display: flex;
+    margin-left: 50px;
+    // align-items: center;
+}
+.card{
+    margin-left: 70px;
+}

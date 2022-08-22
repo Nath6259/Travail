@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>site web 03-08-2022</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer  type="module"></script>
+</head>
+<body>
+    <!-- nav-bar -->
+    <nav id="top-menu-nav">
+        <ul id="top-menu" class="nav">
+            <li id="menu-item-1" class="menu-item"><a href="#main-content">Vous vendez un bien</a></li>
+            <li id="menu-item-2" class="menu-item"><a href="#skills">Vous recherchez un bien</a></li>
+            <li id="menu-item-3" class="menu-item"><a href="#experience">simulateurs de crédit</a></li>
+            <li id="menu-item-4" class="menu-item"><a href="#contact">Diagnostics</a></li>
+            <li id="menu-item-5" class="menu-item"><a href="#contact">Nous contacter</a></li>
+        </ul>
+    </nav>
+    <!-- fin nav-bar -->
+
+    <!-- Qui somme-nous ? -->
+    <div class="who">
+        <div class="title">
+            <p>Qui somme-nous ?</p>
+        </div>
+        <div class="desc">
+            <p>Professionels de l'immobilier depuis plus de 15 ans, nous sommes un intermédiaire entre vendeurs et acquéreurs.<br>
+            Notre volonté est de mener à bien toute transaction dans le respect de chacun, en offrant un suivi séreiux<br>
+            dans l'intérêt des deux parties <strong>à un coût très réduit de 1% HT du prix de vente.</strong></p>
+        </div>
+        <div class="space-between">
+            <div class="plus">
+                <i class="fa-solid fa-plus"></i>
+                <p>Des frais <br>d'agences réduits</p>
+            </div>
+            <div class="plus">
+                <i class="fa-solid fa-plus"></i>
+                <p>Un service<br>de qualité</p>
+            </div>
+            <div class="plus">
+                <i class="fa-solid fa-plus"></i>
+                <p>Des visites<br>ciblées</p>
+            </div>
+            <div class="plus">
+                <i class="fa-solid fa-plus"></i>
+                <p>Des délais<br>raccourcis</p>
+            </div>
+        </div>
+        <div class="and-more">
+            <button>EN SAVOIR + SUR NOS PRESTATIONS</button>
+        </div>
+        <div class="our-serv">
+            <div class="img-container">
+                <p class="title-our">NOS SERVICES EN LIGNE</p>
+                <div class="cards">
+                    <div class="span DD">
+                        <div class="DD2">
+                            <i class="fa-solid fa-stethoscope"></i>
+                            <p class="p-title">DIAGNOSTIC</p>
+                            <p class="p-desc">Indentifiez en quelque clics
+                            <br>les diagnostics immobiliers<br>
+                            à effectuer pour la vente<br>
+                            de votre bien.</p>
+                            <button class="escape">EN SAVOIR +</button>
+                        </div>
+                    </div>
+                    <div class="span DD">
+                        <div class="DD2">
+                        <i class="fa-solid fa-handshake"></i>
+                        <p class="p-title2">DEMANDE DE<br> RENDEZ-VOUS</p>
+                        <p class="p-desc">Prenez rendez-vous<br>
+                        avec l'un de nos conseillers<br>
+                        pour l'estimation et la mise
+                        <br>en vente de votre bien.</p>
+                        <button class="escape2">EN SAVOIR +</button>
+                        </div>
+                    </div>
+                    <div class="span Simu">
+                        <div class="Simu2">
+                        <i class="fa-solid fa-calculator"></i>
+                        <p class="p-title">SIMULATEURS</p>
+                        <p class="p-desc">Evaluez vos capacités d'emprunt.<br>
+                        Calculez le montant de votre prêt<br>
+                        ou de vos mensualiés.<br>
+                        Estimez vos frais de notaire.</p>
+                        <button class="escape">EN SAVOIR +</button>
+                        </div>
+                    </div>    
+                    <div class="span DF">
+                        <div class="DF2">
+                        <i class="fa-solid fa-hand-holding-dollar"></i>
+                        <p class="p-title2">DEMANDE DE <br>FINACEMENT</p>
+                        <p class="p-desc">Laissez-nous vos coordonnées<br>
+                        et un courtier vous contactera<br>
+                        pour effectuer une étude <br>
+                        de financement gratuite<br>
+                        et sans engagement.</p>
+                        <button class="escape3">EN SAVOIR +</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fin Qui somme-nous ? -->
+
+    <!-- que recherchez-vous ? -->
+    <section class="search">
+        <div class="title">
+            <p class="space">que recherchez-vous ?</p>    
+        </div>
+        <div class="select">
+            <div class="goods">
+                <p class="indication">TYPES DE BIEN</p>
+                <select name="goods-btn" id="">
+                    <option value="">-- Selectionner un bien --</option>
+                    <option value="">Appartement</option>
+                    <option value="">Maison</option>
+                </select>
+            </div>
+            <div class="locate">
+                <p class="indication">LOCALISATION</p>
+                <input type="text" name="" id="">
+            </div>
+            <div class="budget">
+                <p class="indication">BUDGET</p>
+                <div class="twin-btn">
+                    <p class="de">De</p>
+                    <input class="twin1" type="text" name="" id="" placeholder="€">
+                    <p class="À">À</p>
+                    <input class="twin2" type="text" name="" id="" placeholder="€">
+                </div>
+            </div>
+        </div>
+        <div class="launch-search">
+            <button>LANCER LA RECHERCHE</button>
+        </div>
+    </section>
+</body>
+</html>
