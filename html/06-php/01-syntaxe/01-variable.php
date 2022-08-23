@@ -208,4 +208,130 @@ echo "J'aime la $a[0], la $a[1] et l'$a[2] <br>";
 echo count($a), "<br>";
 $b[] = "fraise";
 echo "<pre>". print_r($b, 1). "</pre>";
+
+// Un tableau associatif est un tableau qui prend un string pour index, au lieu d'un chiffre
+$person = ["prenom"=>"Maurice", "age"=>52];
+// On utilisera la syntaxe "key"=>"value";
+echo "<pre>". print_r($person, 1) . "</pre>";
+
+echo $person['prenom']." à " . $person["age"] . " ans. <br>";
+// Pour selectionner ou ajouter un élément d'un tableau associatif, on utilisera sa clef
+// une inexistante pour un ajout, un existante pour une selection.
+$person["loisir"] = ["pétanque", "bowling"];
+
+echo "<pre>". print_r($person, 1) . "</pre>";
+// un tableau multidimensionnel est un tableau comportant au moins un autre tableau.
+echo $person["loisir"][0], "<br>";
+/* Pour selectionner un élément dans un tableau multidimensionnel, il faudra écrire les
+clefs les unes derières les autres $array[1][0][2]... */
+
+// pour supprimer un élément d'un tableau, on pourra utiliser unset();
+unset($b[1]);
+echo "<pre>". print_r($b, 1) . "</pre>";
+/* Le problème de cette solution est que dans un tableau indexé par des chiffres
+on se retrouve avec un trou.
+pour régler cela on pourra utiliser array_values()
+Cette fonction retourne avec un tableau qui contient toute les valeurs du tableau
+donné en argument.*/
+$b = array_values($b);
+echo "<pre>". print_r($b, 1). "</pre>";
+// une autre solution pour supprimer un élément s'un tableau classqiue :
+echo "<pre>". print_r($a, 1). "</pre>";
+array_splice($a,1,1);
+/* cette fonction, supprime dans le tableau donné en premier argument,
+les éléments à partir de la position donné en second argument,
+sur une longueur donné en 3ème argument. */
+echo "<pre>". print_r($a, 1). "</pre>";
+// En vérité on peut aussi se servir de cette fonction pour remplacer.
+array_splice($a, 0, 1, ["brocoli", "pamplemousse"]);
+// si on lui donne un quatrième argument, il remplacera le supprimé par celui ci.
+echo "<pre>". print_r($a, 1). "</pre>";
+// Pour fusionner des tableaux, on utilisera :
+$ab = array_merge($a, $b);
+echo "<pre>". print_r($ab, 1). "</pre>";
+sort($ab);
+echo  "<pre>". print_r($ab, 1). "</pre>";
+/*
+    rsort pour trier par décroissant.
+    
+    Pour les tableaux associatif :
+        asort() par ordre croissant des valeurs.
+        ksort() par ordre croissant des clefs.
+        arsort() par ordre décroissant des valeurs.
+        krsort() par ordre décroissant des clefs.
+*/
+#---------------------------------------------------------------------------------------
+echo "<h1> Boolean </h1><hr>";
+// Seul deux valeurs sont possible, true et false;
+$t = true;
+$f = false;
+var_dump($t, $f);
+// mais il existe bien des manières des mannières d'obtenir ces deux valeurs.
+
+echo "<br> 5<3 : ";
+var_dump(5<3);
+echo "<br> 5<=5 : ";
+var_dump(5<=5);
+echo "<br> 5>3 : ";
+var_dump(5>3);
+echo "<br> 5>=5 : ";
+var_dump(5>=5);
+echo "<br> 5=='5' : ";
+var_dump(5=='5');
+echo "<br> 5==='5' : ";
+var_dump(5==='5');
+echo "<br> 5!='5' : ";
+var_dump(5!='5');
+echo "<br> 5<>'5' : ";
+var_dump(5<>'5');
+echo "<br> 5!=='5' : ";
+var_dump(5!=='5');
+
+// Il est possible des les combiner :
+echo "<br>5>3 and 5<2 : ";
+var_dump(5>3 and 5<2);
+// "and" peut aussi s'écrire "&&"
+echo "<br>5>3 && 5<2 : ";
+var_dump(5>3 && 5<2);
+
+echo "<br>5>3 or 5<2 : ";
+var_dump(5>3 or 5<2);
+// "or" peut aussi s'écrire "||";
+echo "<br>5>3 || 5<2 : ";
+var_dump(5>3 || 5<2);
+
+echo "<br>5>3 xor 5<2 : ";
+var_dump(5>3 xor 5<2);
+// xor est true si uniquement l'un des deux résultats est true;
+echo "<br>5>3 xor 5<8 : ";
+var_dump(5>3 xor 5<8);
+
+// le "!" inverse le résultat, true devient false, et false devient true.
+echo "<br>!(5>3 && 5<2) : ";
+var_dump(!(5>3 && 5<2));
+#---------------------------------------------------------------------------------------
+echo "<h1> Les variables superglobals </h1><hr>";
+/* 
+    Les variables superglobals, sont des variables défini par défaut dans PHP.
+    Elles sont accessible n'importe ou dans votre code.
+
+    $GLOBALS :
+        contient toute les variables définie (par votre code ou php);
+    $_SERVER :
+        contient les informations lié au serveur, le header, l'url...
+    $_REQUEST :
+        contient $_POST, $_GET, $_COOKIE, il y a peu d'intérêt à l'utiliser.
+    $_POST :
+        contient toute les informations envoyé en méthode POST.
+    $_GET :
+        contient toute les informations envoyé en méthode GET.
+    $_ENV :
+        contient les variables d'environnement.
+    $_COOKIE :
+        contient les cookies
+    $_SESSION :
+        contient les informations stocké en session.
+        (voir cours sur session)
+*/
+echo  "<pre>". print_r($_COOKIE, 1). "</pre>";
 ?>
