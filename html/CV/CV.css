@@ -77,7 +77,7 @@ nav{
     bottom: 70px;
     position: absolute;
     left: 50%;
-    width: 1200px;
+    width: 100%;
     transform: translate(-50%);
 }
 
@@ -99,8 +99,8 @@ header {
 }
 .icon{
     display: inline-block;
-    margin-inline-start: 80px;
-    margin-inline-end: 80px;
+    margin-inline-start: 78px;
+    margin-inline-end: 78px;
     color: white;
     cursor: default;
     transition: 0.3s ease;
@@ -436,14 +436,14 @@ footer{
         margin: 50px 0px 50px 0px;
     }
     .section-title2{
-        right: 539px;
+        right: 423px;
     }
     .img-container{
         width: 25%;
         left: 170px;
     }
     .stars{
-        margin-left: 136px;
+        margin-left: 116px;
     }
     .left{
         top: 215px;
